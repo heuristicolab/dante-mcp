@@ -1,0 +1,22 @@
+# manifest_hash: 573c978f422e5c379830c2736505b260b93186f28715b081388ec45acccfd1ac
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      danteApiKey:
+        type: string
+        description: "Optional dnt_live_ API key from https://danteix.com/#modalities (runs in 30% free preview mode if omitted)."
+      danteMcpEndpoint:
+        type: string
+        default: "https://danteix.com/api/mcp/invoke"
+        description: "Dante IX HTTPS JSON-RPC 2.0 Edge Gateway endpoint."
+  commandFunction: |-
+    (config) => ({
+      command: 'uvx',
+      args: ['dante-mcp'],
+      env: {
+        ...(config.danteApiKey ? { DANTE_API_KEY: config.danteApiKey } : {}),
+        DANTE_MCP_ENDPOINT: config.danteMcpEndpoint || 'https://danteix.com/api/mcp/invoke'
+      }
+    })

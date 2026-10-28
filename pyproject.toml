@@ -1,0 +1,50 @@
+# manifest_hash: 573c978f422e5c379830c2736505b260b93186f28715b081388ec45acccfd1ac
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dante-mcp"
+version = "2.1.0"
+description = "Dante IX — Autonomous Brand, Social Listening & Multi-Model GEO Agency MCP Connector (ChatGPT, Gemini, Perplexity)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Heurístico Lab", email = "hola@danteix.com"}
+]
+keywords = [
+    "mcp",
+    "model-context-protocol",
+    "geo",
+    "generative-engine-optimization",
+    "seo",
+    "brand-intelligence",
+    "social-listening",
+    "ai-agents",
+    "danteix",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://danteix.com"
+Repository = "https://github.com/heuristicolab/dante-mcp"
+Documentation = "https://danteix.com/#use-cases"
+Verification = "https://danteix.com/api/mcp/verify-seal"
+
+[project.scripts]
+dante-mcp = "dante_mcp.client:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
