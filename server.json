@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.heuristicolab/dante-mcp",
   "title": "Dante IX — Autonomous Brand & GEO Agency MCP",
-  "description": "9-Circle Brand Reputation, Social Listening & Multi-Model GEO Audit & Technical Shield Forge (danteix.com).",
+  "description": "9-Circle Brand Reputation, Social Listening & Multi-Model GEO Audit + Shield Forge (danteix.com).",
   "version": "2.1.0",
   "websiteUrl": "https://danteix.com",
   "repository": {
